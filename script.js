@@ -29,38 +29,47 @@ function messageTimer() {
     }
 }
 
-// Função para adicionar uma tarefa à lista
-function addTask() {
-    const taskInput = document.getElementById('task-input');
-    const taskListElement = document.getElementById('task-list');
-    const task = taskInput.value.trim();
+document.querySelector('#push').onclick = function() {
+    var taskInput = document.querySelector('#newtask input');
+    if (taskInput.value.length == 0) {
+        alert("Por favor, digite o nome da tarefa!")
+    } else {
+        var taskCount = document.querySelectorAll('.task').length;
+        if (taskCount >= 10) {
+            alert("Limite máximo de 10 tarefas atingido!");
+            return;
+        }
 
-    if (task !== '') {
-        const taskItem = document.createElement('li');
-        taskItem.textContent = task;
-        taskListElement.appendChild(taskItem);
+        var timerContainer = document.querySelector('.timer-container');
+        var timerContainerMargin = getComputedStyle(timerContainer).marginTop;
+
+        document.querySelector('#tasks').innerHTML += `
+            <div class="task">
+                <span id="taskname">
+                    ${taskInput.value}
+                </span>
+                <button class="delete">
+                    <i class="far fa-trash-alt">X</i>
+                </button>
+            </div>
+        `;
+
+        timerContainer.style.marginTop = timerContainerMargin; // Manter a margem superior do container do timer
+
+        var current_tasks = document.querySelectorAll(".delete");
+        for (var i = 0; i < current_tasks.length; i++) {
+            current_tasks[i].onclick = function() {
+                this.parentNode.remove();
+            }
+        }
+
         taskInput.value = '';
-
-        // Armazenar a tarefa no localStorage
-        const tasks = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];
-        tasks.push(task);
-        localStorage.setItem('tasks', JSON.stringify(tasks));
     }
 }
 
-// Função para carregar as tarefas armazenadas no localStorage
-function loadTasks() {
-    const taskListElement = document.getElementById('task-list');
-
-    // Obter as tarefas do localStorage
-    const tasks = localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];
-
-    // Adicionar as tarefas na lista
-    for (const task of tasks) {
-        const taskItem = document.createElement('li');
-        taskItem.textContent = task;
-        taskListElement.appendChild(taskItem);
-    }
+document.querySelector('#deleteall').onclick = function() {
+    var tasksContainer = document.querySelector('#tasks');
+    tasksContainer.innerHTML = '';
 }
 
 // Função para iniciar o temporizador
