@@ -12,8 +12,8 @@ body {
     background-color: #8873EB;
     padding: 20px;
     display: flex;
-    align-items: flex-start; /* Alterado */
-    justify-content: center; /* Alterado */
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -21,6 +21,7 @@ body {
 }
 
 .header-title {
+    font-family: "Roboto Slab";
     font-size: 24px;
     margin: 0;
     color: white;
@@ -32,9 +33,15 @@ h1 {
     margin-top: 20px;
 }
 
-.timer,
+.timer {
+    font-family: "Roboto Slab";
+    font-size: 80px;
+    color: white;
+    text-align: center;
+}    
 p#message {
-    font-size: 40px;
+    font-family: "Roboto Slab";
+    font-size: 20px;
     color: white;
     text-align: center;
 }
@@ -51,7 +58,7 @@ button,
     margin: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .button-container {
@@ -67,7 +74,14 @@ button:hover,
     color: white;
 }
 
-.timer-container,
+.timer-container{
+    background-color: #8873EB;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 10px; 
+}    
 .task {
     background-color: #8873EB;
     padding: 10px;
