@@ -1,0 +1,101 @@
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #530082;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+/* Estilo para o cabeçalho (h1) */
+h1 {
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilo para o parágrafo com o tempo decorrido */
+p#time {
+    font-size: 64px;
+    color: white;
+    text-align: center;
+}
+
+/* Estilo para os botões */
+button {
+    font-family: Arial, sans-serif;    
+    font-weight: bold;
+    background-color: white;
+    color: #530082;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Estilo para o parágrafo de mensagem */
+p#message {
+    text-align: center;
+    color: white;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.timer-container {
+    text-align: center;
+    margin-top: 20px;
+    background-color: #8873EB; /* Cor cinza */
+    padding: 20px; /* Espaçamento interno - ajuste o valor conforme necessário */
+    border-radius: 10px;
+}
+
+/* Estilo para o container dos botões */
+.button-container {
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+}
+
+#time {
+    font-size: 64px; /* Tamanho maior */
+    color: white; /* Cor personalizada (laranja) */
+}
+
+.title-container {
+    position: center;
+    top: 0;
+    left: 0;
+    padding: 10px; /* Espaçamento interno - ajuste o valor conforme necessário */
+}
+
+.task-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.task-container h2 {
+    color: white;
+}
+
+.task-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-container li {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.task-container input[type="text"] {
+    padding: 5px;
+    margin-top: 10px;
+}

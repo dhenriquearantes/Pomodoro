@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="containter">
+        <div class="title-container">
+            <h1>Temporizador - Pomodoro</h1>
+        </div>
+        <div class="timer-container">
+            <p><span id="time">00:00</span></p>
+            <p id="message"></p>
+            <button id="start">INICIAR</button>
+            <button id="stop">PAUSAR</button>
+        </div>
+        <div class="task-container">
+            <h2>Tarefas:</h2>
+            <ul id="task-list"></ul>
+            <input type="text" id="task-input" placeholder="Digite uma tarefa">
+            <button id="add-task">Adicionar Tarefa</button>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
