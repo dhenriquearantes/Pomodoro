@@ -3,8 +3,8 @@ body {
     background-color: #530082;
     margin: 0;
     padding: 0;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
 }
 
@@ -14,10 +14,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0; 
 }
 
 .header-title {
@@ -25,6 +21,19 @@ body {
     font-size: 24px;
     margin: 0;
     color: white;
+}
+
+.footer-container {
+    background-color: #8873EB;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-content {
+    font-family: 'Roboto Slab', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
 }
 
 h1 {
@@ -38,7 +47,9 @@ h1 {
     font-size: 80px;
     color: white;
     text-align: center;
-}    
+    margin-top: 40px;
+}
+
 p#message {
     font-family: "Roboto Slab";
     font-size: 20px;
@@ -74,26 +85,31 @@ button:hover,
     color: white;
 }
 
-.timer-container{
+.timer-container {
     background-color: #8873EB;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
     margin-bottom: 5px;
-    margin-top: 10px; 
-}    
+    margin-top: 120px; /* Ajuste a distância aqui */
+}
+
 .task {
     background-color: #8873EB;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
     margin-bottom: 5px;
-    margin-top: 10px; 
-}    
+    margin-top: 10px;
+    width: 350px; /* Defina o valor da largura desejada */
+}
 
 .container {
-    text-align: center;
-    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 1;
 }
 
 #newtask input[type="text"] {
@@ -105,7 +121,7 @@ button:hover,
 .task {
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 #taskname {
@@ -118,4 +134,14 @@ button:hover,
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+@media (max-width: 600px) {
+    .header-title {
+        font-size: 18px;
+    }
+
+    .timer {
+        font-size: 40px;
+    }
 }
