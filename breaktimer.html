@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="title">Temporizador</title>
+    <title>Temporizador</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,11 +17,11 @@
     <div class="container">
         <div class="timer-container">
             <div class="buttonmode-container">
-                <button id="btn-pomodoro">Pomodoro</button>
-                <button id="btn-descanso">Descanso</button>
-                <button id="btn-set-timer">Definir tempo</button>                
+                <a href="index.html"><button id="start">Pomodoro</button></a>
+                <a href="breaktimer.html"><button id="stop">Descanço</button></a>
             </div>            
             <p><span id="time" class="timer">25:00</span></p>
+            <p id="message"></p>
             <div class="button-container">
                 <button id="start">INICIAR</button>
                 <button id="stop">PAUSAR</button>
