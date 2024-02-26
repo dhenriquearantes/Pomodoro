@@ -29,6 +29,44 @@ function messageTimer() {
     }
 }
 
+document.querySelector('#push').onclick = function() {
+    var taskInput = document.querySelector('#newtask input');
+    if (taskInput.value.length == 0) {
+        alert("Por favor, digite o nome da tarefa!")
+    } else {
+        var taskCount = document.querySelectorAll('.task').length;
+        if (taskCount >= 10) {
+            alert("Limite máximo de 10 tarefas atingido!");
+            return;
+        }
+        
+        document.querySelector('#tasks').innerHTML += `
+            <div class="task">
+                <span id="taskname">
+                    ${taskInput.value}
+                </span>
+                <button class="delete">
+                    <i class="far fa-trash-alt">❌</i>
+                </button>
+            </div>
+        `;
+
+        var current_tasks = document.querySelectorAll(".delete");
+        for (var i = 0; i < current_tasks.length; i++) {
+            current_tasks[i].onclick = function() {
+                this.parentNode.remove();
+            }
+        }
+
+        taskInput.value = '';
+    }
+}
+
+document.querySelector('#deleteall').onclick = function() {
+    var tasksContainer = document.querySelector('#tasks');
+    tasksContainer.innerHTML = '';
+}
+
 // Função para iniciar o temporizador
 function startTimer() {
     if (timer === null) {
