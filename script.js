@@ -15,7 +15,7 @@ function updateTimer() {
   timeElement.textContent = formatTime(time);
   
   if (timer) {
-    document.title = `Temporizador - ${formatTime(time)}`;
+    document.title = `${formatTime(time)} - Temporizador`;
   } else {
     document.title = 'Temporizador';
   }
@@ -96,7 +96,7 @@ function startPomodoroTimer() {
 
 function startDescansoTimer() {
   if (!isPomodoroMode) {
-    initialTime = 1 * 60;
+    initialTime = 15 * 60;
     resetTimer();
   }
 }
@@ -140,7 +140,7 @@ function addTask() {
     
     const deleteButton = document.createElement('button');
     deleteButton.classList.add('delete');
-    deleteButton.innerHTML = '<i class="far fa-trash-alt">❌</i>';
+    deleteButton.innerHTML = '<i title="Deletar tarefa" class="far fa-trash-alt">❌</i>';
     deleteButton.addEventListener('click', function() {
       taskElement.remove();
     });

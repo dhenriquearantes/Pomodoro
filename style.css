@@ -13,8 +13,7 @@ body {
     padding: 20px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 20px
+    justify-content: space-between;
   }
   
   .header-title {
@@ -22,6 +21,39 @@ body {
     font-size: 24px;
     margin: 0;
     color: white;
+  }
+  
+  .buttonmode-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .buttonmode-container button {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    background-color: #2F384B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  .buttonmode-container button:hover {
+    background-color: #3D4457;
+  }
+  
+  @media (max-width: 600px) {
+    .header-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .buttonmode-container {
+      margin-top: 10px;
+    }
   }
   
   .footer-container {
@@ -58,8 +90,8 @@ body {
     width: 400px;
     height: 400px;
     margin: 0 auto;
-    margin-top: 20px; /* Defina a mesma distância do cabeçalho */
-    margin-bottom: 20px; /* Defina a mesma distância do rodapé */
+    margin-top: 20px;
+    margin-bottom: 20px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,30 +120,6 @@ body {
     border-radius: 5px;
   }
   
-  #buttonmode-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: auto;
-    flex-wrap: wrap;
-  }
-  
-  #buttonmode-container button {
-    font-family: Arial, sans-serif;
-    font-weight: bold;
-    background-color: #3D4457;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 5px;
-  }
-  
-  #buttonmode-container button:hover {
-    background-color: #2F384B;
-  }
   .buttons-container {
     top: 100%;
     display: flex;
@@ -123,7 +131,7 @@ body {
   .button:hover,
   .delete:hover,
   .deleteall-button:hover {
-    background-color: #2F384B;
+    background-color: #3D4457;
   }
   
   .task {
@@ -142,13 +150,20 @@ body {
     align-items: center;
     justify-content: flex-start;
     flex-grow: 1;
-    margin-top: 20px; /* Adicionando uma margem superior */
+    margin-top: 20px; 
   }
   
   #newtask input[type="text"] {
-    padding: 5px;
+    padding: 10px;
     margin-top: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    outline: none;
+  }
+  
+  #newtask input[type="text"]:focus {
+    border-color: #2F384B;
   }
   
   .task {

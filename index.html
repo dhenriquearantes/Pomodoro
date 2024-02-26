@@ -11,11 +11,11 @@
 </head>
 <body>
     <div class="header-container">
-        <h1 class="header-title">Temporizador - Pomodoro</h1>
+        <h1 class="header-title">Pomodoro</h1>
         <div class="buttonmode-container">
-            <button id="btn-pomodoro">Pomodoro</button>
-            <button id="btn-descanso">Descanso</button>
-            <button id="btn-set-timer">Definir tempo</button>                
+            <button title="Modo Pomodoro" id="btn-pomodoro">Pomodoro</button>
+            <button title="Modo Descanso" id="btn-descanso">Descanso</button>
+            <button title="Escolha o tempo do temporizador" id="btn-set-timer">Definir tempo</button>                
         </div>            
     </div>
     
@@ -23,21 +23,21 @@
         <div class="timer-container">
             <p><span id="time" class="timer">25:00</span></p>
             <div class="button-container">
-                <button id="start">
+                <button title="Iníciar" id="start">
                     <img src="img/play-btn.png" alt="Iníciar" width="25" height="25">
                 </button>
-                <button id="stop">
+                <button title="Pausar" id="stop">
                     <img src="img/stop-btn.png" alt="Pausar" width="25" height="25">
                 </button>
-                <button id="reset">
-                    <img src="img/reset-btn.png" alt="Reiniciar" width="25" height="25">
+                <button  title="Resetar" id="reset">
+                    <img src="img/reset-btn.png" alt="Resetar" width="25" height="25">
                 </button>
             </div>
         </div>
         <div id="newtask">
             <input type="text" placeholder="Digite uma tarefa..">
-            <button type="button" id="push">✖️</button>
-            <button id="deleteall">🗑️</button>
+            <button title="Adicionar tarefa" type="button" id="push">✖️</button>
+            <button title="Deletar todas tarefas" id="deleteall">🗑️</button>
         </div>        
         <div class="tasks-container" id="tasks"></div>
     </div>
@@ -45,8 +45,11 @@
     <div class="footer-container">
         <h1 class="footer-content">Criado por Dharantes</h1>
         <a href="https://github.com/dhenriquearantes" target="_blank">
-            <img src="img/github.png" alt="GitHub" width="25" height="25">
+            <img src="img/github.png" alt="GitHub" width="30" height="30">
           </a>
+        <a href="https://www.linkedin.com/in/dhenriquearantes/" target="_blank">
+            <img src="img/linkedin.png" alt="linkedin" width="30" height="30">
+          </a>          
     </div>    
     <script src="./script.js"></script>
 </body>
