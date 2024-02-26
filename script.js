@@ -33,9 +33,9 @@ function startTimer() {
         updateTimer();
         
         if (isPomodoroMode) {
-          startDescansoTimer();
+          swithToDescansoMode();
         } else {
-          startPomodoroTimer();
+          switchToPomodoroMode()
         }
         
         setTimeout(() => {
@@ -96,13 +96,23 @@ function startPomodoroTimer() {
 
 function startDescansoTimer() {
   if (!isPomodoroMode) {
-    initialTime = 15 * 60;
+    initialTime = 1 * 60;
     resetTimer();
   }
 }
 
 function showAlert(message) {
   alert(message);
+}
+
+function swithToDescansoMode() {
+  isPomodoroMode = false;
+  startDescansoTimer();
+}
+
+function switchToPomodoroMode() {
+  isPomodoroMode = true;
+  startPomodoroTimer();
 }
 
 function addTask() {

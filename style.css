@@ -1,147 +1,205 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #530082;
+    background-color: white;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-.header-container {
-    background-color: #8873EB;
+  }
+  
+  .header-container {
+    background-color: #2F384B;
     padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.header-title {
+    margin-bottom: 20px
+  }
+  
+  .header-title {
     font-family: "Roboto Slab";
     font-size: 24px;
     margin: 0;
     color: white;
-}
-
-.footer-container {
-    background-color: #8873EB;
+  }
+  
+  .footer-container {
+    background-color: #2F384B;
     padding: 10px;
     text-align: center;
-}
-
-.footer-content {
-    font-family: 'Roboto Slab', sans-serif;
-    font-size: 18px;
+  }
+  
+  .footer-content {
+    font-size: 14px;
     font-weight: bold;
-    color: #333;
-}
-
-h1 {
+    color: white;
+    margin-top: 20px;
+  }
+  
+  h1 {
     color: white;
     text-align: center;
     margin-top: 20px;
-}
-
-.timer {
+  }
+  
+  .timer {
     font-family: "Roboto Slab";
     font-size: 80px;
     color: white;
     text-align: center;
-    margin-top: 40px;
-}
-
-p#message {
+  }
+  
+  .timer-container {
+    background-color: #2F384B;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    margin-top: 20px; /* Defina a mesma distância do cabeçalho */
+    margin-bottom: 20px; /* Defina a mesma distância do rodapé */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  p#message {
     font-family: "Roboto Slab";
     font-size: 20px;
     color: white;
     text-align: center;
-}
-
-button,
-.delete,
-.deleteall-button {
+  }
+  
+  button,
+  .delete,
+  .deleteall-button {
     font-family: Arial, sans-serif;
     font-weight: bold;
-    background-color: white;
-    color: #530082;
+    background-color: #3D4457;
+    color: white;
     border: none;
     padding: 10px 20px;
     margin: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     border-radius: 5px;
-}
-
-.button-container {
+  }
+  
+  #buttonmode-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    flex-wrap: wrap;
+  }
+  
+  #buttonmode-container button {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    background-color: #3D4457;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  #buttonmode-container button:hover {
+    background-color: #2F384B;
+  }
+  .buttons-container {
+    top: 100%;
     display: flex;
     justify-content: center;
-    flex-direction: row;
-}
-
-button:hover,
-.delete:hover,
-.deleteall-button:hover {
-    background-color: #530082;
-    color: white;
-}
-
-.timer-container {
-    background-color: #8873EB;
-    padding: 10px;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    margin-top: 120px; /* Ajuste a distância aqui */
-}
-
-.task {
-    background-color: #8873EB;
+    align-items: flex-end;
+    margin-top: 20px;
+  }
+  
+  .button:hover,
+  .delete:hover,
+  .deleteall-button:hover {
+    background-color: #2F384B;
+  }
+  
+  .task {
+    background-color: #2F384B;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
     margin-bottom: 5px;
     margin-top: 10px;
-    width: 350px; /* Defina o valor da largura desejada */
-}
-
-.container {
+    width: 350px;
+  }
+  
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     flex-grow: 1;
-}
-
-#newtask input[type="text"] {
+    margin-top: 20px; /* Adicionando uma margem superior */
+  }
+  
+  #newtask input[type="text"] {
     padding: 5px;
     margin-top: 10px;
     border-radius: 5px;
-}
-
-.task {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#taskname {
+  }
+  
+  .task {
+    background-color: #2F384B;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    width: 350px;
+  }
+  
+  #taskname {
     flex: 1;
     color: white;
     margin-right: 10px;
-}
-
-#tasks {
+  }
+  
+  #tasks {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-@media (max-width: 600px) {
+  }
+  
+  @media (max-width: 600px) {
     .header-title {
-        font-size: 18px;
+      font-size: 18px;
     }
-
+  
     .timer {
-        font-size: 40px;
+      font-size: 40px;
     }
-}
+  
+    .timer-container {
+      width: 300px;
+      height: 300px;
+    }
+  
+    .buttons-container {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 10px;
+    }
+  
+    .button,
+    .delete,
+    .deleteall-button {
+      padding: 8px 16px;
+    }
+  
+    .task {
+      width: 250px;
+    }
+  }

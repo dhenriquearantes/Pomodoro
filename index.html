@@ -12,20 +12,26 @@
 <body>
     <div class="header-container">
         <h1 class="header-title">Temporizador - Pomodoro</h1>
+        <div class="buttonmode-container">
+            <button id="btn-pomodoro">Pomodoro</button>
+            <button id="btn-descanso">Descanso</button>
+            <button id="btn-set-timer">Definir tempo</button>                
+        </div>            
     </div>
     
     <div class="container">
         <div class="timer-container">
-            <div class="buttonmode-container">
-                <button id="btn-pomodoro">Pomodoro</button>
-                <button id="btn-descanso">Descanso</button>
-                <button id="btn-set-timer">Definir tempo</button>                
-            </div>            
             <p><span id="time" class="timer">25:00</span></p>
             <div class="button-container">
-                <button id="start">INICIAR</button>
-                <button id="stop">PAUSAR</button>
-                <button id="reset">REINICIAR</button>
+                <button id="start">
+                    <img src="img/play-btn.png" alt="Iníciar" width="25" height="25">
+                </button>
+                <button id="stop">
+                    <img src="img/stop-btn.png" alt="Pausar" width="25" height="25">
+                </button>
+                <button id="reset">
+                    <img src="img/reset-btn.png" alt="Reiniciar" width="25" height="25">
+                </button>
             </div>
         </div>
         <div id="newtask">
@@ -38,6 +44,9 @@
     
     <div class="footer-container">
         <h1 class="footer-content">Criado por Dharantes</h1>
+        <a href="https://github.com/dhenriquearantes" target="_blank">
+            <img src="img/github.png" alt="GitHub" width="25" height="25">
+          </a>
     </div>    
     <script src="./script.js"></script>
 </body>
