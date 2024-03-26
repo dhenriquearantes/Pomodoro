@@ -96,7 +96,7 @@ function startPomodoroTimer() {
 
 function startDescansoTimer() {
   if (!isPomodoroMode) {
-    initialTime = 15 * 60;
+    initialTime = 5 * 60;
     resetTimer();
   }
 }
